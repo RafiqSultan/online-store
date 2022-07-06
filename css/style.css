@@ -1,0 +1,1433 @@
+                                            /* Global css */
+                                            
+                                             :root {
+                                                --main-color: #d40a0a;
+                                                --color-bg: #2e4757;
+                                                --color-bg-opacity: rgba(46, 71, 87, 0.9);
+                                                --color-1: #e2e3e5;
+                                                --shadow-black-300: 0 4px 12px rgba(245, 245, 245, 0.3);
+                                                --shadow-black-100: 0 5px 15px rgba(0, 0, 0, 0.1);
+                                            }
+                                            
+                                             ::-webkit-scrollbar {
+                                                width: 10px;
+                                            }
+                                            
+                                             ::-webkit-scrollbar-thumb {
+                                                border-radius: 30px;
+                                                /* background: linear-gradient(linear, left top, left bottom, from(#ff8a00), to(#da1b60)); */
+                                                box-shadow: inset 2px 2px 2px rgba(255, 0, 0, 0.911), inset -2px -2px 2px rgb(255, 0, 0);
+                                                background-color: var(--color-bg);
+                                            }
+                                            
+                                             ::-webkit-scrollbar-track {
+                                                background-color: var(--color-1);
+                                                border-radius: 10px;
+                                                /* background: linear-gradient(to right, #be0202, #be0202 1px, #100e17 1px, #100e17) */
+                                            }
+                                            
+                                            * {
+                                                margin: 0;
+                                                padding: 0;
+                                                outline: none !important;
+                                            }
+                                            
+                                            img {
+                                                max-width: 100%;
+                                                vertical-align: middle;
+                                            }
+                                            
+                                            ul {
+                                                list-style: none;
+                                            }
+                                            
+                                            .section-padding {
+                                                padding: 50px 0;
+                                            }
+                                            
+                                            .btn-1 {
+                                                background-color: #fff;
+                                                padding: 5px 10px;
+                                                border: none;
+                                                border-radius: 30px;
+                                                color: #000;
+                                                font-size: 16px;
+                                                font-weight: 500;
+                                                text-transform: capitalize;
+                                                transition: all 0.5s ease;
+                                                box-shadow: var(--shadow-black-300);
+                                            }
+                                            
+                                            @media (max-width: 768px) and (max-width: 991px) {
+                                                .about-us .about,
+                                                .contact,
+                                                .customer-ser {
+                                                    margin-top: 300px !important;
+                                                }
+                                                .pyment-section .product-details {
+                                                    margin-top: 150px !important;
+                                                }
+                                            }
+                                            
+                                            @media (max-width:991px) {
+                                                .phones-categ {
+                                                    margin-top: 100px !important;
+                                                    display: block !important;
+                                                }
+                                                .phones-categ .button-categ {
+                                                    display: block !important;
+                                                    padding: 0 10px;
+                                                }
+                                            }
+                                            
+                                            @media (max-width:768px) {
+                                                .phones-categ {
+                                                    margin-top: 180px !important;
+                                                }
+                                            }
+                                            /* Loading ***********************************************/
+                                            
+                                            .loader_bg {
+                                                position: fixed;
+                                                z-index: 9999;
+                                                background: var(--color-bg);
+                                                width: 100%;
+                                                height: 100%;
+                                            }
+                                            
+                                            .ring {
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
+                                                width: 150px;
+                                                height: 150px;
+                                                background: #000;
+                                                border: 3px solid #3c3c3c;
+                                                border-radius: 50%;
+                                                text-align: center;
+                                                line-height: 150px;
+                                                font-family: sans-serif;
+                                                font-size: 20px;
+                                                color: #fff000;
+                                                letter-spacing: 4px;
+                                                text-transform: uppercase;
+                                                text-shadow: 0 0 10px #fff000;
+                                                box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                                                z-index: 100;
+                                            }
+                                            
+                                            .ring:before {
+                                                content: '';
+                                                position: absolute;
+                                                top: -3px;
+                                                left: -3px;
+                                                width: 100%;
+                                                height: 100%;
+                                                border: 3px solid transparent;
+                                                border-top: 3px solid #fff000;
+                                                border-right: 3px solid #fff000;
+                                                border-radius: 50%;
+                                                animation: animateC 2s linear infinite;
+                                            }
+                                            
+                                            .ring span {
+                                                display: block;
+                                                position: absolute;
+                                                top: calc(50% - 2px);
+                                                left: 50%;
+                                                width: 50%;
+                                                height: 4px;
+                                                background: transparent;
+                                                transform-origin: left;
+                                                animation: animate 2s linear infinite;
+                                            }
+                                            
+                                            .ring span:before {
+                                                content: '';
+                                                position: absolute;
+                                                width: 16px;
+                                                height: 16px;
+                                                border-radius: 50%;
+                                                background: #fff000;
+                                                top: -6px;
+                                                right: -8px;
+                                                box-shadow: 0 0 20px #fff000;
+                                            }
+                                            
+                                            @keyframes animateC {
+                                                0% {
+                                                    transform: rotate(0deg);
+                                                }
+                                                100% {
+                                                    transform: rotate(360deg);
+                                                }
+                                            }
+                                            
+                                            @keyframes animate {
+                                                0% {
+                                                    transform: rotate(45deg);
+                                                }
+                                                100% {
+                                                    transform: rotate(405deg);
+                                                }
+                                            }
+                                            /* Loading ***********************************************/
+                                            /* Start Alert Logo  Section *******************/
+                                            
+                                            .alert {
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                flex-wrap: wrap;
+                                            }
+                                            
+                                            .alert-secondary {
+                                                padding: 0;
+                                                margin: 0;
+                                            }
+                                            
+                                            .form-inline input {
+                                                padding: 0 clac(100px - 20px);
+                                            }
+                                            
+                                            .logo h2 {
+                                                font-size: 38px;
+                                                font-weight: bold;
+                                                font-style: italic;
+                                                color: var(--color-bg);
+                                                letter-spacing: -15px;
+                                            }
+                                            
+                                            .logo span {
+                                                font-size: 40px;
+                                                font-weight: bold;
+                                                color: var(--main-color);
+                                                font-style: italic;
+                                                font-family: ' cairo', 'sans-serif';
+                                                letter-spacing: 0;
+                                                margin: 0 2px;
+                                            }
+                                            
+                                            .alert .user-sigin p {
+                                                font-size: 16px;
+                                                font-style: italic;
+                                                line-height: 40px;
+                                            }
+                                            
+                                            .alert .user-sigin span {
+                                                font-size: 16px;
+                                                color: var(--main-color);
+                                            }
+                                            
+                                            .btn-group button {
+                                                background-color: var(--color-1);
+                                                color: var(--color-bg);
+                                            }
+                                            
+                                            .btn-group a:hover {
+                                                background-color: var(--color-bg);
+                                                color: #fff;
+                                            }
+                                            
+                                            .form-inline input {
+                                                width: 500px !important;
+                                            }
+                                            
+                                            @media (max-width:991px) {
+                                                .btn-lang {
+                                                    margin-top: 10px;
+                                                }
+                                            }
+                                            
+                                            @media (max-width:1240px) {
+                                                .form-inline input {
+                                                    width: 400px !important;
+                                                }
+                                            }
+                                            
+                                            @media (max-width:768px) {
+                                                .form-inline input {
+                                                    width: 300px !important;
+                                                }
+                                                .icons-nav {
+                                                    position: absolute !important;
+                                                    top: -105px !important;
+                                                    right: -10px !important;
+                                                    z-index: 1000;
+                                                }
+                                                .icons-nav i {
+                                                    /* background-color: #fff; */
+                                                    color: var(--color-bg) !important;
+                                                }
+                                                .alert {
+                                                    display: block !important;
+                                                    text-align: center;
+                                                }
+                                            }
+                                            
+                                            @media (max-width:576px) {
+                                                .form-inline input {
+                                                    width: 250px !important;
+                                                }
+                                                .alert {
+                                                    display: block !important;
+                                                    text-align: center;
+                                                }
+                                                .icons-nav {
+                                                    position: absolute !important;
+                                                    top: -38px !important;
+                                                    right: -10px !important;
+                                                    z-index: 1000;
+                                                }
+                                            }
+                                            /* End Alert Logo  Section */
+                                            /* Start Navbar Section  ********************* */
+                                            
+                                            .section-navbar {
+                                                background-color: var(--color-bg);
+                                                border-radius: 5px;
+                                                padding: 0 !important;
+                                                width: 100%;
+                                            }
+                                            
+                                            .navbar {
+                                                margin: 0;
+                                                padding: 5px 0;
+                                                display: flex;
+                                                justify-content: space-between !important;
+                                                align-items: center !important;
+                                            }
+                                            
+                                            .nav-item .nav-link {
+                                                padding: 5px 0;
+                                                margin: 0 8px;
+                                                color: #fff;
+                                                font-size: 16px;
+                                                position: relative;
+                                            }
+                                            
+                                            .nav-item .nav-link::before {
+                                                content: "";
+                                                position: absolute;
+                                                left: 0;
+                                                bottom: 0;
+                                                right: 0;
+                                                height: 1px;
+                                                background-color: rgb(255, 255, 255);
+                                                transition: all 0.6s ease;
+                                                transform: scale(0);
+                                                /*  0 hidden line , 1 apper line under link */
+                                            }
+                                            
+                                            .navbar .nav-item .nav-link.active::before,
+                                            .navbar .nav-item .nav-link:hover::before {
+                                                transform: scale(1);
+                                            }
+                                            
+                                            .navbar-collapse {
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: space-evenly;
+                                            }
+                                            
+                                            .navbar-nav ul {
+                                                margin-left: auto !important;
+                                                padding-left: auto;
+                                            }
+                                            
+                                            .navbar .icons-nav {
+                                                width: fit-content;
+                                                height: 100%;
+                                                margin-right: 50px;
+                                                position: relative;
+                                            }
+                                            
+                                            .navbar .icons-nav i {
+                                                font-size: 26px;
+                                                padding: 4px;
+                                                color: #fff;
+                                                cursor: pointer;
+                                            }
+                                            
+                                            .navbar .icons-nav .shop-number::after {
+                                                content: '7';
+                                                width: 20px;
+                                                height: 20px;
+                                                position: absolute;
+                                                right: -10px;
+                                                top: 0;
+                                                background-color: var(--main-color);
+                                                border-radius: 50%;
+                                                font-size: 14px;
+                                                text-align: center;
+                                                line-height: 20px;
+                                            }
+                                            
+                                            .navbar .icons-nav:hover .shop-number::after {
+                                                color: #fff;
+                                            }
+                                            
+                                            .navbar .icons-nav i:hover {
+                                                color: var(--main-color)
+                                            }
+                                            
+                                            .section-navbar .dropdown-menu button:hover {
+                                                background-color: var(--color-bg);
+                                                color: #fff;
+                                            }
+                                            
+                                            @media (max-width:992px) {
+                                                .nav-item a {
+                                                    font-size: 12px !important;
+                                                    font-weight: 500;
+                                                }
+                                            }
+                                            /* End Navbar Section  */
+                                            /* Start  Carousel  Section  ***************************************/
+                                            
+                                            .carousel-order {
+                                                max-height: 700px;
+                                                width: 100%;
+                                                margin-top: 105px !important;
+                                                overflow: hidden;
+                                            }
+                                            
+                                            .carousel-order img {
+                                                width: 100% !important;
+                                            }
+                                            
+                                            .carousel-control-prev,
+                                            .carousel-control-next {
+                                                background-color: #000 !important;
+                                                width: 60px;
+                                                height: 60px;
+                                                margin: auto 50px;
+                                                border-radius: 50%;
+                                                transition: all 0.5s ease;
+                                            }
+                                            
+                                            .carousel-control-next:hover,
+                                            .carousel-control-prev:hover {
+                                                background-color: var(--color-1) !important;
+                                            }
+                                            
+                                            @media (max-width:992px) {
+                                                .carousel-order {
+                                                    max-height: 700px;
+                                                    margin-top: 135px !important;
+                                                    margin-top: auto;
+                                                }
+                                            }
+                                            
+                                            @media (max-width:768px) {
+                                                .carousel-order {
+                                                    max-height: 700px;
+                                                    margin-top: 225px !important;
+                                                }
+                                            }
+                                            
+                                            @media (max-width:576px) {
+                                                .carousel-order {
+                                                    display: none;
+                                                    background-image: none;
+                                                }
+                                            }
+                                            /* End  Carousel  Section  */
+                                            /* Start Category-1  Section  ***************************************/
+                                            
+                                            .section-title-bar {
+                                                background-color: var(--main-color);
+                                                padding: 8px 0;
+                                                border-radius: 10px;
+                                                box-shadow: var(--shadow-black-100);
+                                                margin: 5px 0;
+                                            }
+                                            
+                                            .category-1 {
+                                                background-color: var(--color-2);
+                                                margin-top: 30px;
+                                            }
+                                            
+                                            @media (max-width:576px) {
+                                                .category-1 .section-title {
+                                                    margin-top: 180px !important;
+                                                }
+                                            }
+                                            
+                                            .section-title {
+                                                display: flex;
+                                                background-color: var(--main-color);
+                                                justify-content: space-between;
+                                                color: var(--color-1);
+                                                text-align: center;
+                                            }
+                                            
+                                            .section-title h2 {
+                                                font-size: 30px;
+                                                font-weight: 500;
+                                            }
+                                            
+                                            .section-title span {
+                                                font-size: 32px;
+                                                font-weight: bold;
+                                                color: #fff;
+                                            }
+                                            
+                                            .section-title a {
+                                                text-align: center;
+                                                line-height: 30px;
+                                                /* color: #fff; */
+                                                border: 2px solid black;
+                                               /* background: linear-gradient(to right, #000 50%, #fff 50%);*/
+                                               background-size: 200% 100%;
+                                                background-position: bottom right;
+                                                transition: all .7s ease-out;
+                                            }
+                                            
+                                            .section-title a:hover {
+                                                border: 2px solid #fff;
+                                                background-position: bottom left;
+                                                color: #fff;
+                                            }
+                                            
+                                            .card-deck .card {
+                                                width: 350px;
+                                                height: fit-content;
+                                                background-color: #fff;
+                                                padding: 2px 2px;
+                                                margin: 5px;
+                                                border-radius: 15px;
+                                                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                                            }
+                                            
+                                            .card .box-item .box-img {
+                                                width: fit-content;
+                                                height: 250px;
+                                                max-height: 300px;
+                                                padding: 0 25%;
+                                                margin: 0;
+                                                overflow: hidden;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            }
+                                            
+                                            .card .box-img img {
+                                                width: 100%;
+                                                max-height: 100%;
+                                                padding: 0;
+                                                margin: 0;
+                                            }
+                                            
+                                            .card .icons-hover {
+                                                position: absolute;
+                                                z-index: 100;
+                                                left: 10px;
+                                                bottom: 60%;
+                                            }
+                                            
+                                            .card .icons-hover .view {
+                                                width: 40px;
+                                                height: 45px;
+                                                margin: 2px 0;
+                                                text-align: center;
+                                                line-height: 45px;
+                                                border-radius: 10px;
+                                                background: linear-gradient(to top, #E60202 50%, #2F4858 50%);
+                                                background-size: 100% 200%;
+                                                background-position: top left;
+                                                transition: all 1s ease-out;
+                                            }
+                                            
+                                            .card-body .rating {
+                                                color: yellow;
+                                            }
+                                            
+                                            .card .icons-hover .view:hover {
+                                                border: 2px solid #fff;
+                                                background-position: bottom left;
+                                            }
+                                            
+                                            .card .icons-hover .view i {
+                                                color: #fff;
+                                            }
+                                            
+                                            .card .icons-hover .view:hover {
+                                                background-color: var(--main-color);
+                                            }
+                                            
+                                            .card .box-item .icons-hover {
+                                                opacity: 0;
+                                            }
+                                            
+                                            .card .box-item:hover .icons-hover {
+                                                opacity: 1;
+                                            }
+                                            
+                                            .card .box-item:hover .box-img {
+                                                opacity: 0.5;
+                                                background-color: var(--color-bg);
+                                            }
+                                            
+                                            .card .card-footer {
+                                                display: flex;
+                                                justify-content: space-evenly;
+                                                align-items: center;
+                                                padding: 0;
+                                            }
+                                            
+                                            .card .card-footer h5 {
+                                                font-size: 20px;
+                                                color: #E60202;
+                                            }
+                                            
+                                            .card .card-footer a {
+                                                font-size: 16px;
+                                                color: #fff;
+                                                background: linear-gradient(to top, #000 50%, #E60202 50%);
+                                                background-size: 100% 200%;
+                                                background-position: top left;
+                                                transition: all 0.5s ease;
+                                            }
+                                            
+                                            .card .card-footer a:hover {
+                                                border: 2px solid #E60202;
+                                                background-position: bottom left;
+                                            }
+                                            
+                                            .carousel {
+                                                padding: 0;
+                                                margin: 0 10px;
+                                            }
+                                            
+                                            .category_bg {
+                                                padding: 0 !important;
+                                                margin: 0;
+                                                background-color: var(--color-bg-opacity);
+                                                border-radius: 10px;
+                                            }
+                                            
+                                            .third-row li {
+                                                height: 25px;
+                                                width: 25px;
+                                                background-color: black;
+                                                border-radius: 50%;
+                                                list-style: none;
+                                                cursor: pointer;
+                                                margin: 0 1px;
+                                            }
+                                            
+                                            .third-row li:nth-child(1) {
+                                                background-color: brown;
+                                            }
+                                            
+                                            .third-row li:nth-child(2) {
+                                                background-color: #27EE2A;
+                                            }
+                                            
+                                            .third-row li:nth-child(3) {
+                                                background-color: #434474;
+                                            }
+                                            
+                                            .third-row li:nth-child(4) {
+                                                background-color: #7F82DC;
+                                            }
+                                            
+                                            .third-row li:nth-child(5) {
+                                                background-color: #070eda;
+                                            }
+                                            
+                                            .third-row li:nth-child(6) {
+                                                background-color: #07c1da;
+                                            }
+                                            
+                                            .third-row li:nth-child(7) {
+                                                background-color: #000;
+                                            }
+                                            
+                                            @media (max-width:576px) {
+                                                .box-shob .card {
+                                                    width: 100%;
+                                                }
+                                                .nav-footer {
+                                                    display: flex !important;
+                                                    flex-direction: column !important;
+                                                }
+                                                .nav-footer-cont {
+                                                    margin: 10px 0 !important;
+                                                }
+                                            }
+                                            /* End  Category-1  Section  */
+                                            /* Start  Footer Section *********************************** */
+                                            
+                                            .footer-section {
+                                                padding: 20px 0 0 0;
+                                                margin: 0 !important;
+                                                color: #fff;
+                                                background-color: var(--color-bg);
+                                                border-radius: 10px;
+                                            }
+                                            
+                                            .footer-section h3 {
+                                                font-size: 40px !important;
+                                                color: var(--main-color) !important;
+                                                font-weight: 700 !important;
+                                                background-color: var(--color-1);
+                                                border-radius: 50%;
+                                                width: fit-content;
+                                                padding: 10px 10px;
+                                                font-style: italic;
+                                            }
+                                            
+                                            .footer-section h3 span {
+                                                color: var(--color-bg);
+                                            }
+                                            
+                                            .center-content {
+                                                margin-top: 120px;
+                                                margin-bottom: 120px
+                                            }
+                                            
+                                            .footer-section a {
+                                                color: #fff;
+                                                display: block;
+                                                width: fit-content;
+                                                /* when d-block width 100% so we do width fit content */
+                                                font-size: 13px;
+                                                text-decoration: none;
+                                                transition: all 0.5s ease;
+                                            }
+                                            
+                                            .footer-section a:hover {
+                                                padding-left: 5px;
+                                            }
+                                            
+                                            .footer-section h3 {
+                                                color: #fff;
+                                                font-size: 20px;
+                                                font-weight: 500;
+                                            }
+                                            
+                                            .line {
+                                                border-top: 1px solid rgba(255, 255, 255, 0.4);
+                                                width: 90% !important
+                                            }
+                                            
+                                            .fa-mobile {
+                                                font-size: 20px
+                                            }
+                                            
+                                            #contact {
+                                                font-size: 15px
+                                            }
+                                            
+                                            .logo-footer {
+                                                box-shadow: 0 4px 12px rgba(247, 243, 243, 0.2);
+                                                background-color: var(--color-1);
+                                                width: fit-content;
+                                                border-radius: 10px;
+                                            }
+                                            
+                                            .logo-footer h2 {
+                                                color: var(--color-bg);
+                                            }
+                                            
+                                            .footer-section .icons i {
+                                                font-size: 26px;
+                                                color: #00b9f5;
+                                                margin: 3px;
+                                                border-radius: 10px;
+                                                cursor: pointer;
+                                            }
+                                            
+                                            .footer-section .icons i:hover {
+                                                color: #fff;
+                                            }
+                                            
+                                            @media (max-width:992px) {
+                                                .bottom-part .nav-footer {
+                                                    display: flex;
+                                                    /* align-items: flex-start; */
+                                                    justify-content: center;
+                                                }
+                                            }
+                                            
+                                            @media (max-width:768px) {
+                                                .bottom-part {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    align-items: flex-start;
+                                                    justify-content: center;
+                                                }
+                                                .bottom-part .nav-footer {
+                                                    display: flex !important;
+                                                    justify-content: flex-start !important;
+                                                    text-align: left;
+                                                }
+                                            }
+                                            /* End Footer Section */
+                                            /* **************************
+           Responsive
+           ************************* */
+                                            
+                                            @media (max-width:767px) {
+                                                .view .content {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                }
+                                                .checkbox-content {
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                }
+                                                .checkbox-content .os {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    /* justify-content: space-between; */
+                                                }
+                                            }
+                                            
+                                            @media (min-width:769px) and (max-width:991px) {
+                                                .checkbox-content {
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    align-items: flex-start;
+                                                    justify-content: space-evenly;
+                                                    flex-wrap: nowrap;
+                                                    margin-bottom: 10px;
+                                                    box-shadow: var(--shadow-black-100);
+                                                    padding: 0 15px;
+                                                }
+                                                .checkbox-content .os form {
+                                                    display: block !important;
+                                                }
+                                            }
+                                            
+                                            @media (max-width:576px) {
+                                                .checkbox-content {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: space-between;
+                                                    align-items: flex-start;
+                                                }
+                                                .view-phone-categ {
+                                                    display: block;
+                                                    margin: 0;
+                                                }
+                                                .view-phone-categ .card-deck {
+                                                    display: block;
+                                                    margin: 0;
+                                                }
+                                                .button-categ {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                }
+                                            }
+                                            /* **************** */
+                                            
+                                            .phones-categ {
+                                                padding: 0 50px;
+                                                display: flex;
+                                                flex-direction: column;
+                                                margin-top: 30px;
+                                            }
+                                            
+                                            .phones-categ .button-categ i {
+                                                font-size: 16px;
+                                                color: #fff;
+                                                margin-right: 10px;
+                                            }
+                                            
+                                            .view-phone-categ {
+                                                width: fit-content !important;
+                                                /* background-color: var(--color-bg); */
+                                                border-radius: 10px;
+                                                justify-content: center;
+                                            }
+                                            
+                                            .checkbox-content .os {
+                                                margin: 10px 10px;
+                                            }
+                                            
+                                            .button-categ {
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                margin: 50px auto 0;
+                                                background-color: var(--color-bg);
+                                                box-shadow: var(--shadow-black-300);
+                                                padding: 5px;
+                                            }
+                                            
+                                            .button-categ a {
+                                                width: 100%;
+                                                padding: 5px 10px;
+                                                margin: 10px 5px;
+                                                background-color: var(--main-color);
+                                                color: #fff;
+                                                box-shadow: var(--shadow-black-100);
+                                            }
+                                            
+                                            .button-categ a:hover {
+                                                background-color: var(--color-1);
+                                                color: var(--main-color);
+                                            }
+                                            /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+                                            /* .video-popup {
+                                                padding: 30px;
+                                                position: fixed;
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%;
+                                                height: 100%;
+                                                z-index: 19999;
+                                                background-color: rgba(0, 0, 0, .7);
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                opacity: 0;
+                                                visibility: hidden;
+                                                transition: all 0.5s ease;
+                                            }
+                                            
+                                            .video-popup-open {
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                            
+                                            .video-popup-inner {
+                                                width: 100%;
+                                                max-width: 900px;
+                                                position: relative;
+                                            }
+                                            
+                                            .video-popup .video-popup-close {
+                                                position: absolute;
+                                                right: 0;
+                                                top: -30px;
+                                                height: 30px;
+                                                width: 30px;
+                                                background-color: var(--main-color);
+                                                font-size: 16px;
+                                                text-align: center;
+                                                line-height: 30px;
+                                                cursor: pointer;
+                                                color: #fff;
+                                            }
+                                            
+                                            .video-popup .iframe-box {
+                                                height: 0;
+                                                overflow: hidden;
+                                                padding-top: 56.25%;
+                                            }
+                                            
+                                            .video-popup #player-1 {
+                                                position: absolute;
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%;
+                                                height: 100%;
+                                                border: 0;
+                                            } */
+                                            /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+                                            /* Payment Section Start  **********************************/
+                                            
+                                            .pyment-section {
+                                                margin-top: 200px !important;
+                                                margin-bottom: 100px;
+                                                box-shadow: var(--shadow-black-100);
+                                                /* background-color: var(--color-1); */
+                                                border-radius: 10px;
+                                            }
+                                            
+                                            .pyment-section .payment-info {
+                                                background-color: var(--color-bg);
+                                                padding: 20px;
+                                                border-radius: 6px;
+                                                color: #fff;
+                                                font-weight: bold;
+                                            }
+                                            
+                                            .pyment-section .product-details {
+                                                padding: 10px;
+                                            }
+                                            
+                                            .pyment-section .cart {
+                                                background: #fff;
+                                            }
+                                            
+                                            .pyment-section .p-about {
+                                                font-size: 12px;
+                                            }
+                                            
+                                            .pyment-section .table-shadow {
+                                                -webkit-box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
+                                                box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
+                                            }
+                                            
+                                            .pyment-section .type {
+                                                font-weight: 400;
+                                                font-size: 10px;
+                                            }
+                                            
+                                            label.radio {
+                                                cursor: pointer;
+                                            }
+                                            
+                                            .pyment-section label.radio input {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                visibility: hidden;
+                                                pointer-events: none;
+                                            }
+                                            
+                                            .pyment-section label.radio span {
+                                                padding: 1px 12px;
+                                                border: 2px solid #ada9a9;
+                                                display: inline-block;
+                                                color: #8f37aa;
+                                                border-radius: 3px;
+                                                text-transform: uppercase;
+                                                font-size: 11px;
+                                                font-weight: 300;
+                                            }
+                                            
+                                            .pyment-section label.radio input:checked+span {
+                                                border-color: #fff;
+                                                background-color: blue;
+                                                color: #fff;
+                                            }
+                                            
+                                            .pyment-section .credit-inputs {
+                                                background: rgb(102, 102, 221);
+                                                color: #fff !important;
+                                                border-color: rgb(102, 102, 221)
+                                            }
+                                            
+                                            .pyment-section .credit-inputs::placeholder {
+                                                color: #fff;
+                                                font-size: 13px;
+                                            }
+                                            
+                                            .pyment-section .credit-card-label {
+                                                font-size: 9px;
+                                                font-weight: 300;
+                                            }
+                                            
+                                            .pyment-section .form-control.credit-inputs:focus {
+                                                background: rgb(102, 102, 221);
+                                                border: rgb(102, 102, 221);
+                                            }
+                                            
+                                            .pyment-section .line {
+                                                border-bottom: 1px solid rgb(102, 102, 221);
+                                            }
+                                            
+                                            .pyment-section .information span {
+                                                font-size: 12px;
+                                                font-weight: 500;
+                                            }
+                                            
+                                            .pyment-section .information {
+                                                margin-bottom: 5px;
+                                            }
+                                            
+                                            .pyment-section .items {
+                                                -webkit-box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.25);
+                                                box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.08);
+                                            }
+                                            
+                                            .pyment-section .spec {
+                                                font-size: 11px;
+                                            }
+                                            /* Payment Section End  */
+                                            /* Customer Services Start ****************************************/
+                                            
+                                            .customer-ser {
+                                                margin-top: 150px;
+                                                color: var(--color-bg);
+                                                font-size: 35px;
+                                                font-weight: bold;
+                                                text-align: center;
+                                                box-shadow: var(--shadow-black-100);
+                                            }
+                                            
+                                            .services-style {
+                                                padding: 10px 20px;
+                                                box-shadow: var(--shadow-black-100);
+                                            }
+                                            
+                                            .services {
+                                                width: 320px;
+                                                height: 90px;
+                                                display: flex;
+                                                box-shadow: var(--shadow-black-100);
+                                                /* justify-content: space-between; */
+                                                align-items: center;
+                                                margin: 10px
+                                            }
+                                            
+                                            .customer-ser .something h5 {
+                                                font-size: 26px;
+                                                font-weight: 700;
+                                                text-align: left;
+                                                padding: 10px 0;
+                                            }
+                                            
+                                            .services .ser-img {
+                                                width: 60px;
+                                                height: 60px;
+                                                margin: 0 15px;
+                                            }
+                                            
+                                            .services .ser-order {
+                                                display: flex;
+                                                flex-direction: column;
+                                                text-align: left;
+                                            }
+                                            
+                                            .services .ser-order h5 {
+                                                font-size: 20px;
+                                                font-weight: 500;
+                                                text-transform: capitalize;
+                                            }
+                                            
+                                            .services .ser-order p {
+                                                font-size: 16px;
+                                                line-height: 5px;
+                                                font-weight: 300;
+                                            }
+                                            /* Customer Services Start */
+                                            /* Contact Section Start  **********************************/
+                                            
+                                            .contact {
+                                                background-color: #fff;
+                                                margin-top: 120px;
+                                            }
+                                            
+                                            .contact .accordion-q {
+                                                width: 100%;
+                                                max-width: 384px;
+                                                margin: 30px auto 20px;
+                                                background: #FFF;
+                                                -webkit-border-radius: 4px;
+                                                -moz-border-radius: 4px;
+                                                border-radius: 0px;
+                                            }
+                                            
+                                            .contact .accordion-q .link-q {
+                                                cursor: pointer;
+                                                display: block;
+                                                padding: 15px 15px 15px 42px;
+                                                color: #4D4D4D;
+                                                font-size: 14px;
+                                                font-weight: 700;
+                                                border-bottom: 1px solid #CCC;
+                                                position: relative;
+                                                -webkit-transition: all 0.4s ease;
+                                                -o-transition: all 0.4s ease;
+                                                transition: all 0.4s ease;
+                                            }
+                                            
+                                            .contact .accordion-q li:last-child .link-q {
+                                                border-bottom: 0
+                                            }
+                                            
+                                            .contact .accordion-q li i {
+                                                position: absolute;
+                                                top: 16px;
+                                                left: 12px;
+                                                font-size: 18px;
+                                                color: #595959;
+                                                -webkit-transition: all 0.4s ease;
+                                                -o-transition: all 0.4s ease;
+                                                transition: all 0.4s ease;
+                                            }
+                                            
+                                            .contact .accordion-q li i.fa-chevron-down {
+                                                right: 12px;
+                                                left: auto;
+                                                font-size: 16px;
+                                            }
+                                            
+                                            .contact .accordion-q li.open .link-q {
+                                                color: #AA00FF;
+                                            }
+                                            
+                                            .contact .accordion-q li.open i {
+                                                color: #AA00FF;
+                                            }
+                                            
+                                            .contact .accordion-q li.open i.fa-chevron-down {
+                                                -webkit-transform: rotate(180deg);
+                                                -ms-transform: rotate(180deg);
+                                                -o-transform: rotate(180deg);
+                                                transform: rotate(180deg);
+                                            }
+                                            
+                                            .contact .submenu {
+                                                display: none;
+                                                background: #444359;
+                                                font-size: 14px;
+                                            }
+                                            
+                                            .contact .submenu li {
+                                                border-bottom: 1px solid #4b4a5e;
+                                            }
+                                            
+                                            .contact .submenu a {
+                                                display: block;
+                                                text-decoration: none;
+                                                color: #d9d9d9;
+                                                padding: 12px;
+                                                padding-left: 42px;
+                                                -webkit-transition: all 0.25s ease;
+                                                -o-transition: all 0.25s ease;
+                                                transition: all 0.25s ease;
+                                            }
+                                            
+                                            .contact .submenu a:hover {
+                                                background: #b63b4d;
+                                                color: #FFF;
+                                            }
+                                            
+                                            .contact .contact-title {
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                text-align: center;
+                                                padding: 20px 0;
+                                            }
+                                            
+                                            .contact .contact-title h2 {
+                                                font-size: 32px;
+                                                color: var(--color-bg);
+                                                font-weight: 500;
+                                                text-align: center;
+                                                box-shadow: var(--shadow-black-300);
+                                            }
+                                            
+                                            .contact .contact-title span {
+                                                font-size: 32px;
+                                                color: var(--main-color);
+                                                font-weight: 500;
+                                                text-align: center;
+                                            }
+                                            
+                                            .contact-info h3 {
+                                                font-size: 22px;
+                                                color: var(--black-900);
+                                                font-weight: 500;
+                                                margin: 0 0 40px;
+                                            }
+                                            
+                                            .contact-info-item {
+                                                position: relative;
+                                                padding-left: 55PX;
+                                                margin-bottom: 30px;
+                                            }
+                                            
+                                            .contact-info-item i {
+                                                position: absolute;
+                                                height: 40px;
+                                                width: 40px;
+                                                left: 0;
+                                                top: 0;
+                                                border-radius: 50%;
+                                                font-size: 16px;
+                                                color: var(--main-color);
+                                                border: 1px solid var(--main-color);
+                                                text-align: center;
+                                                line-height: 38px;
+                                            }
+                                            
+                                            .contact-info-item h4 {
+                                                font-size: 18px;
+                                                font-weight: 400;
+                                                margin: 0 0 10px;
+                                                color: var(--black-900);
+                                            }
+                                            
+                                            .contact-info-item p {
+                                                font-size: 16px;
+                                                font-weight: 300;
+                                                margin: 0;
+                                                line-height: 26px;
+                                                color: var(--black-400);
+                                            }
+                                            
+                                            .contact-form .form-group {
+                                                margin-bottom: 25px;
+                                            }
+                                            
+                                            .contact-form .form-control {
+                                                height: 52px;
+                                                border: 1px solid transparent;
+                                                box-shadow: var(--shadow-black-100);
+                                                border-radius: 30px;
+                                                padding: 0 24px;
+                                                color: #000;
+                                                background-color: rgb(255, 255, 255);
+                                                transition: all 0.5s ease;
+                                            }
+                                            
+                                            .contact-form textarea.form-control {
+                                                height: 140px;
+                                                padding-top: 12px;
+                                                resize: none;
+                                            }
+                                            
+                                            .contact-form .form-control:focus {
+                                                border-color: var(--main-color);
+                                            }
+                                            
+                                            .contact .btn-2 {
+                                                background-color: var(--main-color);
+                                                padding: 12px 30px;
+                                                border: none;
+                                                border-radius: 30px;
+                                                color: #fff;
+                                                font-size: 16px;
+                                                font-weight: 500;
+                                                text-transform: capitalize;
+                                                transition: all 0.5s ease;
+                                                box-shadow: var(--shadow-black-100);
+                                            }
+                                            
+                                            .contact .btn-2:focus {
+                                                box-shadow: var(--shadow-black-100);
+                                            }
+                                            
+                                            .contact .btn-2:hover {
+                                                color: #fff;
+                                                background-color: var(--color-bg);
+                                            }
+                                            /* Contact Section End */
+                                            /* About Us Section Satrt  ********************/
+                                            
+                                            .about-us {
+                                                margin: 120px 0 50px;
+                                            }
+                                            
+                                            .about-us .menu {
+                                                width: 44px;
+                                                position: relative;
+                                                top: -10px;
+                                                height: 3px;
+                                                background: #00000054;
+                                                box-shadow: 0px 11px #ff00006b, 1px 22px #66b78d;
+                                            }
+                                            
+                                            .about-us nav {
+                                                padding: 8px;
+                                                height: 44px;
+                                                color: #909090;
+                                                font-weight: lighter;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                            }
+                                            
+                                            .about-us h2 {
+                                                font-weight: lighter;
+                                            }
+                                            
+                                            .about-us header {
+                                                width: 100%;
+                                                height: auto;
+                                                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+                                            }
+                                            
+                                            .about-us .about {
+                                                text-align: center;
+                                                color: gray;
+                                                padding: 40px;
+                                            }
+                                            
+                                            .about-us .title {
+                                                font-size: 22px;
+                                                color: #2c2c2c;
+                                            }
+                                            
+                                            .about-us .desc {
+                                                color: #909090;
+                                                font-weight: 300;
+                                                font-size: 1.1em;
+                                                line-height: 1.45em;
+                                                margin-bottom: 15px;
+                                                margin-top: 30px;
+                                                width: 70%;
+                                                margin: 0 auto;
+                                            }
+                                            
+                                            @media (max-width: 630px) {
+                                                .about-us .title {
+                                                    font-size: 18px;
+                                                }
+                                            }
+                                            
+                                            .about-us .row {
+                                                width: 95%;
+                                                display: flex;
+                                                padding: 10px;
+                                                justify-content: center;
+                                            }
+                                            
+                                            @media (max-width: 494px) {
+                                                .about-us .row {
+                                                    flex-direction: column;
+                                                }
+                                            }
+                                            
+                                            .about-us .card {
+                                                display: flex;
+                                                text-align: center;
+                                                justify-content: center;
+                                                flex-direction: column;
+                                                align-items: center;
+                                                margin: 10px;
+                                            }
+                                            
+                                            .about-us .card_img {
+                                                width: 100px;
+                                                height: 100px;
+                                                border-radius: 50%;
+                                                box-shadow: 0 9px 30px -6px rgba(24, 206, 15, 0.3);
+                                                position: relative;
+                                                transition: transform .4s;
+                                            }
+                                            
+                                            .about-us .fas,
+                                            .about-us .fab {
+                                                display: inline-block;
+                                                position: absolute;
+                                                color: #63b563;
+                                                transform: translate(-52%, 75%);
+                                                font-size: 40px;
+                                            }
+                                            
+                                            .about-us .card_title {
+                                                font-size: 20px;
+                                                margin: 12px;
+                                                font-weight: bold;
+                                                color: #000000a8;
+                                                transition: color .2s;
+                                            }
+                                            
+                                            .about-us .card:hover .card_title {
+                                                color: #4bd482;
+                                            }
+                                            
+                                            .about-us .card:hover .card_img {
+                                                transform: translate(0px, -10px);
+                                            }
+                                            
+                                            .about-us .card_body {
+                                                color: #8c9490;
+                                                font-size: 16px;
+                                                padding: 0 5px;
+                                                line-height: 1.5;
+                                                word-spacing: 4px;
+                                            }
+                                            /* About Section End */
